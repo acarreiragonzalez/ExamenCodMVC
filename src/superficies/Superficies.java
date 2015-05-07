@@ -14,23 +14,29 @@ public class Superficies {
     /**
      * @param args the command line arguments
      */
+    
+    
     public static void main(String[] args) {
-        
+       
         Modelo lalala=new Modelo();
        
-
+//introducese na variable aux o método realizar operacion, xunto cos valores de num1, e num2
       float aux =realizarOperacion(lalala.getNum1(),lalala.getNum2()); 
-        
+        //O valor dese resultado introducese en set resultado para poder usalo na clase vista
        lalala.setResultado(aux);
-       
+       //co método imprimir na clase vista imprimimos este obxecto con todos os datos
        Vista.imprimir(lalala);
        
        
        
 
-    }
+    }//Relizar operacion pide dous numeros como parámetros que se introducirán por escaner, e , despendendo do String introducido, medieante un if, calculará as diferentes áreas.
+    //A variable resultado gardará este valor e retornarao.
      public static float realizarOperacion(float n1, float n2){
+       
+         //variable que garda o resultado
          float resultado=0;
+         //variable que garda diferentes valores no if para identificar cada figura na clase Vista.
         float resposta=0;
   Modelo pa=new Modelo();
          
