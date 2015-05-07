@@ -11,6 +11,7 @@ package superficies;
  * @author oracle
  */
 public class Vista {
+    //método que recolle os valores establacidos na clase Modelo pola clase Superficies, e que imprime os diferentes resultados dependendo do valor de get Resposta dado anteriormente.
     public static void imprimir(Modelo mod){
         
         if (mod.getResposta()==1)
