@@ -15,65 +15,94 @@ public class Superficies {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String shapeType;
+        
+        Modelo lalala=new Modelo();
+       
 
-        sc = new Scanner(System.in);
+      float aux =realizarOperacion(lalala.getNum1(),lalala.getNum2()); 
+        
+       lalala.setResultado(aux);
+       
+       Vista.imprimir(lalala);
+       
+       
+       
+
+    }
+     public static float realizarOperacion(float n1, float n2){
+         float resultado=0;
+        float resposta=0;
+  Modelo pa=new Modelo();
+         
+          String shapeType;
+          Modelo lalala=new Modelo();
+          sc = new Scanner(System.in);
 
         System.out.println("What shape would you like to find the area of? (square, circle, triangle, rectangle):");
         shapeType = sc.nextLine();
         System.out.println("You said: " + shapeType);
 
         if (shapeType.equals("square")) {
-            //add area calculations for square
-            float squareArea;
+           
+            
             float sideLength;
+            resposta=1;
 
             System.out.println("what is the side length?");
-            sideLength = sc.nextFloat();
-            squareArea = sideLength * sideLength;
-            System.out.println("The area for your square: " + squareArea);
+            n1= sc.nextFloat();
+        
+            resultado = n1 * n1;
+      
+            
 
         }
         if (shapeType.equals("rectangle")) {
             //add area calculations for rectangle here
-            float sideLength;
-            float sideHeight;
-            float rectangleArea;
+            
+            
+            resposta=2;
 
             System.out.println("what is the rectangles width?");
-            sideLength = sc.nextFloat();
+            n1 = sc.nextFloat();
+           
             System.out.println("What is the rectangles height?");
-            sideHeight = sc.nextFloat();
-            rectangleArea = sideLength * sideHeight;
-            System.out.println("The area for your rectangle is: " + rectangleArea);
+            n2 = sc.nextFloat();
+            
+            resultado = n1 * n2;
+            
+           
 
         }
         if (shapeType.equals("triangle")) {
             //add area calculations for triangle here
-            float baseLength;
-            float height;
-            float triangleArea;
-
+            
+           
+resposta=3;
             System.out.println("What is the base length of the triangle?");
-            baseLength = sc.nextFloat();
+            n1 = sc.nextFloat();
             System.out.println("What is the height of the triangle?");
-            height = sc.nextFloat();
-            triangleArea = (float) (0.5 * baseLength * height);
-            System.out.println("Your triangles area is: " + triangleArea);
+            n2 = sc.nextFloat();
+            resultado = (float) (0.5 * n1 * n2);
+            
 
         }
         if (shapeType.equals("circle")) {
             //add area calculations for a circle here
-            float radius;
-            float circleArea;
-
+            
+            
+resposta=4;
             System.out.println("What is the radius of the circle?");
-            radius = sc.nextFloat();
-            circleArea = radius * radius;
-            circleArea = (float) (3.14159265 * circleArea);
-            System.out.println("Your Circles area is " + circleArea);
+            n1 = sc.nextFloat();
+            resultado = n1 * n1;
+            resultado = (float) (3.14159265 * resultado);
+            
 
         }
-
-    }
+        pa.setResposta(resposta);
+        
+         return resultado;
+         
+         
+        
+        }
 }
